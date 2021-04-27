@@ -1,0 +1,1327 @@
+import turtle
+
+def shipsetup():
+    import tkinter
+    wn = turtle.Screen()
+    wn.title("Battleship")
+    turtle.bgpic("shipink.png")
+    bob = turtle.Turtle()
+    wn.register_shape("shipgif.gif")
+    bob.shape("shipgif.gif")
+    bob.shapesize(1)
+    bob.hideturtle()
+    return (bob, wn, turtle.bgpic)
+    
+    
+
+def game():
+    (bob, wn, turtle.bgpic) = shipsetup()
+    bob.penup()
+    cookie = []
+    print("Your ships are pink and your miss indicator is the blue turtle")
+    for i in range(7):
+        ships = input("Enter a letter A-G and a number 1-6 to place your ships: ")
+        cookie.append(ships)
+        if ships[0] == "A":
+            if ships[1] == "1":
+                bob.goto(-670,320)
+                one=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,320)
+                two=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,320)
+                three=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,320)
+                four=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,320)
+                five=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,320)
+                six=bob.stamp()
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "B":
+            if ships[1] == "1":
+                bob.goto(-670,210)
+                bone=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,210)
+                btwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,210)
+                bthree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,210)
+                bfour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,210)
+                bfive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,210)
+                bsix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "C":
+            if ships[1] == "1":
+                bob.goto(-670,100)
+                cone=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1]== "2":
+                bob.goto(-420,100)
+                ctwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,100)
+                cthree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,100)
+                cfour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,100)
+                cfive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,100)
+                csix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "D":
+            if ships[1] == "1":
+                bob.goto(-670,-10)
+                done=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,-10)
+                dtwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,-10)
+                dthree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,-10)
+                dfour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,-10)
+                dfive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,-10)
+                dsix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "E":
+            if ships[1] == "1":
+                bob.goto(-670,-120)
+                eone=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,-120)
+                etwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,-120)
+                ethree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,-120)
+                efour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,-120)
+                efive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,-120)
+                esix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "F":
+            if ships[1] == "1":
+                bob.goto(-670,-250)
+                fone=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,-250)
+                ftwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,-250)
+                fthree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,-250)
+                ffour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,-250)
+                ffive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,-250)
+                fsix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0 
+        if ships[0] == "G":
+            if ships[1] == "1":
+                bob.goto(-670,-340)
+                gone=bob.stamp()
+                yes = 1
+                if ships[1] != "1":
+                    yes = 0 
+            elif ships[1] == "2":
+                bob.goto(-420,-340)
+                gtwo=bob.stamp()
+                yes = 1
+                if ships[1] != "2":
+                    yes = 0 
+            elif ships[1] == "3":
+                bob.goto(-170,-340)
+                gthree=bob.stamp()
+                yes = 1
+                if ships[1] != "3":
+                    yes = 0 
+            elif ships[1] == "4":
+                bob.goto(80,-340)
+                gfour=bob.stamp()
+                yes = 1
+                if ships[1] != "4":
+                    yes = 0 
+            elif ships[1] == "5":
+                bob.goto(330,-340)
+                gfive=bob.stamp()
+                yes = 1
+                if ships[1] != "5":
+                    yes = 0 
+            elif ships[1] == "6":
+                bob.goto(580,-340)
+                gsix=bob.stamp()
+                yes = 1
+                if ships[1] != "6":
+                    yes = 0
+    person = ["A1","A2","A3","A4","A5","A6","B1","B2","B3","B4","B5","B6","C1","C2","C3","C4","C5","C6","D1","D2","D3","D4","D5","D6","E1","E2","E3","E4","E5","E6","F1","F2","F3","F4","F5","F6","G1","G2","G3","G4","G5","G6"]
+    rain = []
+    import random
+    for i in range(7):
+        apple = random.choice(person)
+        rain.append(apple)
+    total = 0
+    choice = ["A1","A2","A3","A4","A5","A6","B1","B2","B3","B4","B5","B6","C1","C2","C3","C4","C5","C6","D1","D2","D3","D4","D5","D6","E1","E2","E3","E4","E5","E6","F1","F2","F3","F4","F5","F6","G1","G2","G3","G4","G5","G6"]
+    steve = turtle.Turtle()
+    wn.register_shape("gifexplosion.gif")
+    steve.shape("gifexplosion.gif")
+    steve.penup()
+    steve.shapesize(1)
+    steve.hideturtle()
+    score = 0
+    fred = turtle.Turtle()
+    fred.shape("arrow")
+    fred.penup()
+    fred.shapesize(3)
+    fred.hideturtle()
+    fred.color("OrangeRed1")
+    larry = turtle.Turtle()
+    larry.penup()
+    larry.hideturtle()
+    larry.shape("turtle")
+    larry.color("blue")
+    while total < 8 or score <8:
+        import random
+        pear = random.choice(choice)
+        choice.remove(pear)
+        if pear == "A1" and "A1" in cookie:
+            steve.goto(-670,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "A1" and "A1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,320)
+            bob.stamp()
+        elif pear == "A2" and "A2" in cookie:
+            steve.goto(-420,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "A2" and "A2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,320)
+            bob.stamp()
+        elif pear == "A3" and "A3" in cookie:
+            steve.goto(-170,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")                
+                return
+        elif pear == "A3" and "A3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,320)
+            bob.stamp()
+        elif pear == "A4" and "A4" in cookie:
+            steve.goto(80,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "A4" and "A4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,320)
+            bob.stamp()
+        elif pear == "A5" and "A5" in cookie :
+            steve.goto(330,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "A5" and "A5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,320)
+            bob.stamp()
+        elif pear == "A6" and "A6" in cookie:
+            steve.goto(580,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "A6" and "A6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,320)
+            bob.stamp()
+        if pear == "B1" and "B1" in cookie:
+            steve.goto(-670,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "B1" and "B1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,210)
+            bob.stamp() 
+        elif pear == "B2" and "B2" in cookie:
+            steve.goto(-420,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "B2" and "B2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,210)
+            bob.stamp() 
+        elif pear == "B3" and "B3" in cookie:
+            steve.goto(-170,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "B3" and "B3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,210)
+            bob.stamp() 
+        elif pear == "B4" and "B4" in cookie:
+            steve.goto(80,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "B4" and "B4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,210)
+            bob.stamp() 
+        elif pear == "B5" and "B5" in cookie:
+            steve.goto(330,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "B5" and "B5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,210)
+            bob.stamp() 
+        elif pear == "B6" and "B6" in cookie:
+            steve.goto(580,210)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "B6" and "B6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,210)
+            bob.stamp() 
+        if pear == "C1" and "C1" in cookie:
+            steve.goto(-670,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "C1" and "C1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,100)
+            bob.stamp() 
+        elif pear == "C2" and "C2" in cookie:
+            steve.goto(-420,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "C2" and "C2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,100)
+            bob.stamp() 
+        elif pear == "C3" and "C3" in cookie:
+            steve.goto(-170,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "C3" and "C3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,100)
+            bob.stamp() 
+        elif pear == "C4" and "C4" in cookie:
+            steve.goto(80,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "C4" and "C4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,100)
+            bob.stamp() 
+        elif pear == "C5" and "C5" in cookie:
+            steve.goto(330,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "C5" and "C5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,100)
+            bob.stamp() 
+        elif pear == "C6" and "C6" in cookie:
+            steve.goto(580,100)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "C6" and "C6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,100)
+            bob.stamp() 
+        if pear == "D1" and "D1" in cookie:
+            steve.goto(-670,-10)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "D1" and "D1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,-10)
+            bob.stamp()  
+        elif pear == "D2" and "D2" in cookie:
+            steve.goto(-420,-10)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "D2" and "D2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,-10)
+            bob.stamp() 
+        elif pear == "D3" and "D3" in cookie:
+            steve.goto(-170,-10)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "D3" and "D3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,-10)
+            bob.stamp() 
+        elif pear == "D4" and "D4" in cookie:
+            steve.goto(80,-10)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "D4" and "D4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,-10)
+            bob.stamp() 
+        elif pear == "D5" and "D5" in cookie:
+            steve.goto(330,-10)
+            steve.stamp()
+            total = total + 1
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "D5" and "D5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,-10)
+            bob.stamp() 
+        elif pear == "D6" and "D6" in cookie:
+            steve.goto(580,-10)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "D6" and "D6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,-10)
+            bob.stamp() 
+        if pear == "E1" and "E1" in cookie:
+            steve.goto(-670,-120)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "E1" and "E1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,-120)
+            bob.stamp() 
+        elif pear == "E2" and "E2" in cookie:
+            steve.goto(-420,-120)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "E2" and "E2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,-120)
+            bob.stamp()
+        elif pear == "E3" and "E3" in cookie:
+            steve.goto(-170,320)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "E3" and "E3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,-120)
+            bob.stamp()
+        elif pear == "E4" and "E4" in cookie:
+            steve.goto(80,-120)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "E4" and "E4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,-120)
+            bob.stamp()
+        elif pear == "E5" and "E5" in cookie:
+            steve.goto(330,-120)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "E5" and "E5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,-120)
+            bob.stamp()
+        elif pear == "E6" and "E6" in cookie:
+            steve.goto(580,-120)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "E6" and "E6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,-120)
+            bob.stamp()
+        if pear == "F1" and "F1" in cookie:
+            steve.goto(-670,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "F1" and "F1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,-230)
+            bob.stamp()
+        elif pear == "F2" and "F2" in cookie:
+            steve.goto(-420,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "F2" and "F2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,-230)
+            bob.stamp()
+        elif pear == "F3" and "F3" in cookie:
+            steve.goto(-170,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "F3" and "F3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,-230)
+            bob.stamp()
+        elif pear == "F4" and "F4" in cookie:
+            steve.goto(80,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "F4" and "F4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,-230)
+            bob.stamp()
+        elif pear == "F5" and "F5" in cookie:
+            steve.goto(330,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "F5" and "F5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,-230)
+            bob.stamp()
+        elif pear == "F6" and "F6" in cookie:
+            steve.goto(580,-230)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "F6" and "F6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,-230)
+            bob.stamp()
+        if pear == "G1" and "G1" in cookie:
+            steve.goto(-670,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        if pear == "G1" and "G1" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-670,-340)
+            bob.stamp() 
+        elif pear == "G2" and "G2" in cookie:
+            steve.goto(-420,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "G2" and "G2" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-420,-340)
+            bob.stamp() 
+        elif pear == "G3" and "G3" in cookie:
+            steve.goto(-170,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "G3" and "G3" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(-170,-340)
+            bob.stamp() 
+        elif pear == "G4" and "G4" in cookie:
+            steve.goto(80,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "G4" and "G4" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(80,-340)
+            bob.stamp() 
+        elif pear == "G5" and "G5" in cookie:
+            steve.goto(330,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "G5" and "G5" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(330,-340)
+            bob.stamp() 
+        elif pear == "G6" and "G6" in cookie:
+            steve.goto(580,-340)
+            steve.stamp()
+            total = total + 1
+            print(total,"of your ships have been sunk")
+            if total == 7:
+                print("The computer wins")
+                return
+        elif pear == "G6" and "G6" not in cookie:
+            bob.shape("turtle")
+            bob.color("white")
+            bob.goto(580,-340)
+            bob.stamp()
+        pick = input("Choose a letter A-G and a number 1-6 to target: ")
+        if pick == "A1" and "A1" in rain:
+            fred.goto(-670,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A1" and "A1" not in rain:
+            larry.goto(-670,320)
+            larry.stamp()
+        if pick == "A2" and "A2" in rain:
+            fred.goto(-420,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A2" and "A2" not in rain:
+            larry.goto(-420,320)
+            larry.stamp()
+        if pick == "A3" and "A3" in rain:
+            fred.goto(-170,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A3" and "A3" not in rain:
+            larry.goto(-170,320)
+            larry.stamp()
+        if pick == "A4" and "A4" in rain:
+            fred.goto(80,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A4" and "A4" not in rain:
+            larry.goto(80,320)
+            larry.stamp()
+        if pick == "A5" and "A5" in rain:
+            fred.goto(330,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A5" and "A5" not in rain:
+            larry.goto(330,320)
+            larry.stamp()
+        if pick == "A6" and "A6" in rain:
+            fred.goto(580,320)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "A6" and "A6" not in rain:
+            larry.goto(580,320)
+            larry.stamp()
+        if pick == "B1" and "B1" in rain:
+            fred.goto(-670,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B1" and "B1" not in rain:
+            larry.goto(-670,210)
+            larry.stamp()
+        if pick == "B2" and "B2" in rain:
+            fred.goto(-420,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B2" and "B2" not in rain:
+            larry.goto(-420,210)
+            larry.stamp()
+        if pick == "B3" and "B3" in rain:
+            fred.goto(-170,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B3" and "B3" not in rain:
+            larry.goto(-170,210)
+            larry.stamp()
+        if pick == "B4" and "B4" in rain:
+            fred.goto(80,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B4" and "B4" not in rain:
+            larry.goto(80,210)
+            larry.stamp()
+        if pick == "B5" and "B5" in rain:
+            fred.goto(330,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B5" and "B5" not in rain:
+            larry.goto(330,210)
+            larry.stamp()
+        if pick == "B6" and "B6" in rain:
+            fred.goto(580,210)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "B6" and "B6" not in rain:
+            larry.goto(580,210)
+            larry.stamp()
+        if pick == "C1" and "C1" in rain:
+            fred.goto(-670,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C1" and "C1" not in rain:
+            larry.goto(-670,100)
+            larry.stamp()
+        if pick == "C2" and "C2" in rain:
+            fred.goto(-420,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C2" and "C2" not in rain:
+            larry.goto(-420,100)
+            larry.stamp()
+        if pick == "C3" and "C3" in rain:
+            fred.goto(-170,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C3" and "C3" not in rain:
+            larry.goto(-170,100)
+            larry.stamp()
+        if pick == "C4" and "C4" in rain:
+            fred.goto(80,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C4" and "C4" not in rain:
+            larry.goto(80,100)
+            larry.stamp()
+        if pick == "C5" and "C5" in rain:
+            fred.goto(330,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C5" and "C5" not in rain:
+            larry.goto(330,100)
+            larry.stamp()
+        if pick == "C6" and "C6" in rain:
+            fred.goto(580,100)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "C6" and "C6" not in rain:
+            larry.goto(580,100)
+            larry.stamp()
+        if pick == "D1" and "D1" in rain:
+            fred.goto(-670,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D1" and "D1" not in rain:
+            larry.goto(-670,-10)
+            larry.stamp()
+        if pick == "D2" and "D2" in rain:
+            fred.goto(-420,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D2" and "D2" not in rain:
+            larry.goto(-420,-10)
+            larry.stamp()
+        if pick == "D3" and "D3" in rain:
+            fred.goto(-170,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D3" and "D3" not in rain:
+            larry.goto(-170,-10)
+            larry.stamp()
+        if pick == "D4" and "D4" in rain:
+            fred.goto(80,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D4" and "D4" not in rain:
+            larry.goto(80,-10)
+            larry.stamp()
+        if pick == "D5" and "D5" in rain:
+            fred.goto(330,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D5" and "D5" not in rain:
+            larry.goto(330,-10)
+            larry.stamp()
+        if pick == "D6" and "D6" in rain:
+            fred.goto(580,-10)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "D6" and "D6" not in rain:
+            larry.goto(580,-10)
+            larry.stamp()
+        if pick == "E1" and "E1" in rain:
+            fred.goto(-670,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E1" and "E1" not in rain:
+            larry.goto(-670,-120)
+            larry.stamp()
+        if pick == "E2" and "E2" in rain:
+            fred.goto(-420,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E2" and "E2" not in rain:
+            larry.goto(-420,-120)
+            larry.stamp()
+        if pick == "E3" and "E3" in rain:
+            fred.goto(-170,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E3" and "E3" not in rain:
+            larry.goto(-170,-120)
+            larry.stamp()
+        if pick == "E4" and "E4" in rain:
+            fred.goto(80,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E4" and "E4" not in rain:
+            larry.goto(80,-120)
+            larry.stamp()
+        if pick == "E5" and "E5" in rain:
+            fred.goto(330,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E5" and "E5" not in rain:
+            larry.goto(330,-120)
+            larry.stamp()
+        if pick == "E6" and "E6" in rain:
+            fred.goto(580,-120)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "E6" and "E6" not in rain:
+            larry.goto(580,-120)
+            larry.stamp()
+        if pick == "F1" and "F1" in rain:
+            fred.goto(-670,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F1" and "F1" not in rain:
+            larry.goto(-670,-230)
+            larry.stamp()
+        if pick == "F2" and "F2" in rain:
+            fred.goto(-420,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F2" and "F2" not in rain:
+            larry.goto(-420,-230)
+            larry.stamp()
+        if pick == "F3" and "F3" in rain:
+            fred.goto(-170,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F3" and "F3" not in rain:
+            larry.goto(-170,-230)
+            larry.stamp()
+        if pick == "F4" and "F4" in rain:
+            fred.goto(80,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F4" and "F4" not in rain:
+            larry.goto(80,-230)
+            larry.stamp()
+        if pick == "F5" and "F5" in rain:
+            fred.goto(330,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F5" and "F5" not in rain:
+            larry.goto(330,-230)
+            larry.stamp()
+        if pick == "F6" and "F6" in rain:
+            fred.goto(580,-230)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "F6" and "F6" not in rain:
+            larry.goto(580,-230)
+            larry.stamp()
+        if pick == "G1" and "G1" in rain:
+            fred.goto(-670,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G1" and "G1" not in rain:
+            larry.goto(-670,-340)
+            larry.stamp()
+        if pick == "G2" and "G2" in rain:
+            fred.goto(-420,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G2" and "G2" not in rain:
+            larry.goto(-420,-340)
+            larry.stamp()
+        if pick == "G3" and "G3" in rain:
+            fred.goto(-170,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G3" and "G3" not in rain:
+            larry.goto(-170,-340)
+            larry.stamp()
+        if pick == "G4" and "G4" in rain:
+            fred.goto(80,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G4" and "G4" not in rain:
+            larry.goto(80,-340)
+            larry.stamp()
+        if pick == "G5" and "G5" in rain:
+            fred.goto(330,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G5" and "G5" not in rain:
+            larry.goto(330,-340)
+            larry.stamp()
+        if pick == "G6" and "F6" in rain:
+            fred.goto(580,-340)
+            fred.stamp()
+            score = score + 1
+            print("You have sunk",score,"ships.",7-score,"left")
+            if score == 7:
+                print("You win!")
+                return
+        elif pick == "G6" and "G6" not in rain:
+            larry.goto(580,-340)
+            larry.stamp()
+    
+
+game()
+        
+         
+
+
